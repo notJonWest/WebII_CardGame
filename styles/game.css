@@ -1,0 +1,549 @@
+body
+{
+    background-image: url(../images/hardwood.jpg);
+    background-repeat: repeat;
+    background-size: 20%;
+}
+main
+{
+    position: relative;
+    border: solid 7px black;
+    border-image: url(../images/darkWood.jpg) 20 round;
+    background-image: url(../images/greenTexture.jpg);
+    text-align: center;
+    min-height: 17em;
+    overflow: auto;
+}
+#logo > p
+{
+    padding-left: 0.5em;
+    height: 2em;
+}
+.logotext
+{
+    padding-right: 0.75em;
+}
+#logoIcons
+{
+    font-size: 4em;
+    right: 0.05em;
+    top: -0.35em;
+}
+
+#accInfo
+{
+    color: beige;
+    background-image: url(../images/darkWood.jpg);
+    background-size: contain;
+    flex-basis: 100%;
+    padding: 0 7px 0 7px;
+    font-family: serif; /*Fits the style better than sans-serif*/
+    font-weight: bold;
+}
+#accInfo > ul
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#accInfo li
+{
+    padding: 2px 0 0 0;
+}
+#username
+{
+    border-bottom: solid 2px beige;
+}
+#notYou, #visit
+{
+    font-size: 0.8em;
+}
+
+/* CSS for the game form */
+form > p > input[type="text"]
+{
+    width: 6em;
+}
+form > p > label:first-child
+{
+    color: white;
+}
+form > p > label.error
+{
+    width: 100%;
+    padding: 0;
+    text-align: left;
+}
+#plrNumP, #cardNumP
+{
+    flex-flow: row wrap;
+}
+form > p > span.widgetVal
+{
+    color: white;
+    margin: auto 0;
+}
+.gameInput.slider
+{
+    margin: auto;
+    font-size: 0.75em;
+    width: calc(100% - 3em);
+}
+#start
+{
+    width: 6em;
+}
+
+/* CSS for pop ups */
+#popUpContainer
+{
+    background-image: url('../images/greenTexture.jpg');
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    display: none;
+    outline: black solid 5px;
+}
+
+/* CSS for the eightChoice pop up */
+#eightChoice
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: none;
+    flex-flow: column nowrap;
+    outline: black solid 5px;
+}
+#eightChoice > span
+{
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 0.9em;
+    font-family: Anderson, sans-serif;
+}
+.choice
+{
+    width: 95%;
+    height: 20%;
+    margin: 1.25% 2.5%;
+    cursor: pointer;
+}
+.redChoice
+{
+    background-color: red;
+    color: black;
+}
+.redChoice:hover
+{
+    box-shadow: 0 0 3px 3px black;
+}
+.blackChoice
+{
+    background-color: black;
+    color: red;
+}
+.blackChoice:hover
+{
+    box-shadow: 0 0 3px 3px red;
+}
+#miscChoices
+{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.miscChoice
+{
+    width: 42.5%;
+    height: 1.1em;
+}
+.suitList
+{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.suitList > li
+{
+    display: inline;
+}
+
+/* CSS for the gameOver pop up */
+#gameOver
+{
+    display: none;
+    height: 100%;
+}
+#gameResult
+{
+    font-size: 2.5em;
+    color: white;
+    text-decoration: underline;
+    margin: 0;
+    font-family: Anderson, sans-serif;
+}
+#plrPoints
+{
+    color: white;
+}
+#plrPoints > ul
+{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+#winner
+{
+	font-size: 1.1em;
+}
+
+/* CSS for card display */
+.playerCards
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.currentPlayer
+{
+    background-color: white;
+    outline: solid 3px red;
+    color: red;
+}
+#gameDiv
+{
+    display: none;
+}
+#played
+{
+    display: inline-block;
+    position: relative;
+    width: 3.8em;
+    height: 5.0666em;
+}
+#currentCard
+{
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    outline: solid 5px red;
+    width: 3.8em;
+    height: 5.0666em;
+    margin: 1em auto;
+}
+#playedBack
+{
+    position: absolute;
+    margin: 0;
+    top: 1em;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+#unplayed
+{
+    display: inline-block;
+    position: relative;
+    width: 3.6em;
+    height: 4.8em;
+}
+#unplayedReal
+{
+    position: relative;
+    z-index: 1;
+}
+#unplayedBack
+{
+    position: absolute;
+    margin: 0;
+    top: 0.5em;
+    left: 0.5em;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+.gameCard
+{
+    /*Ratio: width = 0.75*height*/
+    width: 3.6em;
+    height: 4.8em;
+    margin: 0.5em;
+    z-index: 3;
+}
+.selectableCard
+{
+    cursor: pointer;
+}
+.selectableCard:hover
+{
+    outline: dashed 5px red;
+}
+.selectedCard
+{
+    outline: solid 5px red;
+    width: 3.8em;
+    height: 5.0666em;
+}
+.cpuPlr
+{
+    display: inline;
+}
+.cpuCard
+{
+    width: 1.8em;
+    height: 2.4em;
+    margin: 0.3em;
+}
+.cpuCards
+{
+    display: none;
+}
+#cpuNames
+{
+    display: flex;
+    justify-content: space-around;
+    max-width: 47em;
+    margin: auto;
+}
+label.visibleCPU
+{
+    color: red;
+    font-weight: bold;
+}
+div.visibleCPU
+{
+    display: flex;
+}
+
+#tracking
+{
+    display: none;
+    background-color: white;
+}
+@media all and (min-width: 420px)
+{
+    header
+    {
+        flex-flow: row nowrap;
+    }
+    #logo
+    {
+        order: 2;
+        border-left: solid 5px #620;
+        border-bottom: none;
+        flex-basis: auto;
+        flex-grow: 5;
+        min-width: 9em;
+        max-width: 12em;
+    }
+    .logotext
+    {
+        padding-right: 0;
+        font-size: 2em;
+    }
+    #logo > p
+    {
+        flex-flow: column nowrap;
+        height: auto;
+        padding: 0;
+    }
+    #logo > p > span
+    {
+        margin: -0.2em 0;
+    }
+    #logo > p > span:nth-child(1)
+    {
+        order: 1;
+    }
+    #logo > p > span:nth-child(2)
+    {
+        order: 2;
+    }
+    #logo > p > span:nth-child(3)
+    {
+        order: 4;
+    }
+    #logo > p > span:nth-child(4)
+    {
+        order: 3;
+    }
+    #logoIcons
+    {
+        font-size: 2.5em;
+        position: static;
+    }
+    #accInfo
+    {
+        order: 1;
+        flex-basis: auto;
+        flex-grow: 7;
+    }
+    form > p > label:first-child
+    {
+        width: 10em !important;
+    }
+    form > p > span.widgetVal
+    {
+        margin: auto 1em auto -0.5em;
+    }
+    .gameInput.slider
+    {
+        width: 15em;
+        margin: auto 0;
+    }
+    #start
+    {
+        margin-left: 13em;
+    }
+    
+    #eightChoice
+    {
+        height: 17em;
+        width: 16em;
+        left: 50%;
+        top: 50%;
+        margin-left: -8em;
+        margin-top: -8.5em;
+        flex-flow: row wrap;
+    }
+    .choice
+    {
+        width: 40%;
+        height: 35%;
+        margin: 5%;
+    }
+    .choice[name=Clubs]
+    {
+        order: 4;
+    }
+    #miscChoices
+    {
+        order: 5;
+    }
+    .miscChoice
+    {
+        height: auto;
+        margin: auto;
+    }
+    .suitList > li
+    {
+        font-size: 0.8em;
+    }
+}
+@media all and (min-width: 768px)
+{
+    #logo
+    {
+        min-width: 25em;
+        max-width: 25em;
+        background-size: contain;
+    }
+    #logo > p
+    {
+        flex-flow: row wrap;
+        margin: 10% 0;
+    }
+    
+    #logo > p > span:nth-child(-n+2)
+    {
+        margin-top: 0.1em;
+        padding-left: 1em;
+    }
+    #logo > p > span:nth-child(3)
+    {
+        margin-bottom: 0.1em;
+    }
+    #logoIcons
+    {
+        flex-basis: 100%;
+        font-size: 5em;
+        margin: -0.375em 0 !important;
+    }
+    #accInfo
+    {
+        font-family: 'Bleeding Cowboys', serif;
+        font-weight: normal;
+    }
+    #accInfo > ul
+    {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    #accInfo li
+    {
+        flex-basis: 50%;
+    }
+    #username
+    {
+        border: none;
+    }
+    #name, #visit, #notYou
+    {
+        flex-basis: 100% !important;
+    }
+    #accInfo li.accData:nth-child(2n)
+    {
+        text-align: right;
+    }
+
+    #plrNumSlider
+    {
+        width: 5.5em;
+    }
+
+    #eightChoice
+    {
+        height: 90%;
+        width: 90%;
+        top: 5%;
+        left: 5%;
+        margin: auto;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    #eightChoice > div
+    {
+        order: initial;
+    }
+    .choice
+    {
+        width: 20.625%;
+        height: 80%;
+        margin: 0 1.25%;
+    }
+    #miscChoices
+    {
+        width: 90%;
+        margin: auto 1.25%;
+    }
+    .miscChoice
+    {
+        width: 48.5%;
+        margin: 0;
+    }
+    .suitList > li
+    {
+        font-size: 1em;
+        display: block;
+    }
+    .suitList > li > span.separator
+    {
+        display: none;
+    }
+
+    footer
+    {
+        background-image: none;
+    }
+}

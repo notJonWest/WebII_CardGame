@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>West's Western Saloon</title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0"/>
+	<link rel="shortcut icon" type="images/png" href="images/cards/Spades13.png"/>
+    <link rel="stylesheet" href="jquery/jquery-ui.css"/>
+    <link rel="stylesheet" href="styles/style.css"/>
+    <link rel="stylesheet" href="styles/form.css"/>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <p>
+                <span class="logotext">West's</span>
+                <span class="logotext">Western</span>
+                <span class="logotext">Saloon</span>
+                <span id="logoIcons"><!--
+                 --><span class="icontext" id="redCard">P</span><!--
+                 --><span class="icontext" id="logoHat">f</span><!--
+                 --><span class="icontext" id="navyCard">P</span>
+                </span>
+            </p>
+        </div>
+        <div id="title">Create a new account</div>
+    </header>
+    <main>
+        <form action="game.html" id="userForm" name="userForm">
+            <p>
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="fname" placeholder="John"/>
+                <br/>
+            </p>
+            <p>
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lname" placeholder="Smith"/>
+                <br/>
+            </p>
+            <p>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="a113B"/>
+                <br/>
+            </p>
+            <p>
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" placeholder="(123) 456-7890"/>
+                <br/>
+            </p>
+            <p>
+                <label for="postal">Postal Code:</label>
+                <input type="text" id="postal" name="postal" placeholder="A1B 2C3"/>
+                <br/>
+            </p>
+            <p>
+                <label for="money">Starting amount of money:</label>
+                <input type="text" id="money" name="money" placeholder="5-5000"/>
+                <br/>
+            </p>
+            <p>
+                <input type="submit" value="Create Account"/>
+            </p>
+        </form>
+    </main>
+    <footer>&copy; West's Western Saloon Casino</footer>
+    <script src="jquery/jquery-3.3.1.js"></script>
+    <script src="jquery/jquery-ui.js"></script>
+    <script src="jquery/jquery.validate.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/validate.js"></script>
+</body>
+</html>

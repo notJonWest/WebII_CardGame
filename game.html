@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>Old West Crazy 8's | West's Western Saloon</title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0"/>
+	<link rel="shortcut icon" type="images/png" href="images/cards/Spades13.png"/>
+    <link rel="stylesheet" href="jquery/jquery-ui.css"/>
+    <link rel="stylesheet" href="styles/style.css"/>
+    <link rel="stylesheet" href="styles/game.css"/>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <p>
+                <span class="logotext">West's</span>
+                <span class="logotext">Western</span>
+                <span class="logotext">Saloon</span>
+                <span id="logoIcons"><!--
+                 --><span class="icontext" id="redCard">P</span><!--
+                 --><span class="icontext" id="logoHat">f</span><!--
+                 --><span class="icontext" id="navyCard">P</span>
+                </span>
+            </p>
+        </div>
+        <div id="accInfo">
+            <ul>
+                <li id="username" class="accData"></li>
+                <li id="userMoney" class="accData"></li>
+                <li id="phoneNumber" class="accData"></li>
+                <li id="postalCode" class="accData"></li>
+                <li id="name"></li>
+                <li id="visit"></li>
+                <li id="notYou">Not you? <a id="changeCredentials" href="intro.html">Change your credentials</a>.</li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <form id="gameForm" novalidate>
+            <p id="betP">
+                <label for="bet">Money per point:</label>
+                <input type="text" id="bet" name="bet" placeholder="10" class="gameInput"/>
+                <br/>
+            </p>
+            <p id="plrNumP">
+                <label>Number of opponents:</label>
+                <span id="plrNum" class="widgetVal">1</span>
+                <span id="plrNumSlider" class="gameInput slider"></span>
+                <br/>
+            </p>
+            <p id="cardNumP">
+                <label>Number of cards dealt:</label>
+                <span id="cardNum" class="widgetVal">8</span>
+                <span id="cardNumSlider" class="gameInput slider"></span>
+                <br/>
+            </p>
+            <p>
+                <input type="submit" id="start" value="Start Game"/>
+            </p>
+        </form>
+        <div id="tracking">
+                Turns: <span id="turns"></span> |
+                Dangers: <span id="danger"></span> |
+                Time unplayedDeck was refilled: <span id="uDeckFill"></span> |
+                Eights: <span id="eightsPlayed"></span> |
+                Twos: <span id="twosPlayed"></span> |
+                Jacks: <span id="jacksPlayed"></span>
+        </div>
+        <div id="gameDiv">
+            <div id="played">
+			    <img id="currentCard" class="gameCard" alt="The current card" src="images/cards/backRed.png">
+                <img id="playedBack" alt="The back fo the previously played card" src="images/cards/backRed.png">
+            </div>
+            <div id="unplayed">
+                <img id="unplayedReal" alt="The unplayed deck of cards" class="gameCard" src="images/cards/backRed.png">
+                <img id="unplayedBack" alt="The back of the second card in the unplayed deck" src="images/cards/backRed.png">
+            </div>
+            <div id="cardDisplayDiv">
+                <div id="playerDisplay"></div>
+                <div id="cpuDisplay">
+                    <div id="cpuNames"></div>
+                    <div id="cpuCards"></div>
+                </div>
+            </div>
+        </div>
+        <div id="popUpContainer">
+            <div id="eightChoice">
+                <span class="underline">Choose a suit to change to:</span>
+                <div class="choice blackChoice" title="Spades">
+                    <span class="underline">Spades</span><br/>
+                    <ul class="suitList"></ul>
+                </div>
+                <div class="choice redChoice" title="Hearts">
+                    <span class="underline">Hearts</span><br/>
+                    <ul class="suitList"></ul>
+                </div>
+                <div class="choice blackChoice" title="Clubs">
+                    <span class="underline">Clubs</span><br/>
+                    <ul class="suitList"></ul>
+                </div>
+                <div class="choice redChoice" title="Diamonds">
+                    <span class="underline">Diamonds</span><br/>
+                    <ul class="suitList"></ul>
+                </div>
+				<div id="miscChoices">
+					<div class="choice miscChoice blackChoice" title="autoChoose">Choose for me</div>
+					<div class="choice miscChoice redChoice" title="cancel">Cancel</div>
+				</div>
+            </div>
+            <div id="gameOver">
+                <p id="gameResult"></p>
+                <div id="plrPoints">
+                    <ul></ul>
+                    <hr>
+                    <p id="winner"></p>
+                </div>
+                <hr>
+                <p>
+					<input type="button" id="rematchBtn" value="Play Again"/>
+					<input type="button" id="leaveBtn" value="Exit"/>
+				</p>
+            </div>
+        </div>
+    </main>
+    <footer>&copy; West's Western Saloon Casino</footer>
+    <script src="jquery/jquery-3.3.1.js"></script>
+    <script src="jquery/jquery-ui.js"></script>
+    <script src="jquery/jquery.validate.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/setGame.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>

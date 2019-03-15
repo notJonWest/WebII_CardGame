@@ -1,0 +1,87 @@
+body
+{
+    color: white;
+}
+.logotext
+{
+    padding-left: 1em;
+}
+#logoIcons
+{
+    right: 0.15em;
+    top: -0.4em;
+    font-size: 3em;
+}
+
+#title
+{
+    display: block;
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    font-family: 'Dust West', sans-serif;
+}
+
+@media all and (min-width: 420px)
+{
+    #logo
+    {
+        background-size: 50%;
+    }
+    #logo > p
+    {
+        flex-flow: row nowrap;
+        padding-left: 0.5em;
+        height: 2em;
+    }
+    .logotext
+    {
+        font-size: 5vw;
+        line-height: 1em;
+        padding-left: 0.75em;
+    }
+    #logoIcons
+    {
+        font-size: 4em;
+        right: auto;
+        top: -0.35em;
+    }
+}
+@media all and (min-width: 768px)
+{
+    .logotext
+    {
+        padding: 0;
+        position: absolute;
+        top: 0;
+        font-size: 3em;
+    }
+    .logotext:nth-child(1)
+    {
+        left: 1%;
+    }
+    .logotext:nth-child(2)
+    {
+        left: 0;
+        right: 0;
+        top: -0.25em;
+        font-size: 4em;
+        z-index: 1;
+    }
+    .logotext:nth-child(3)
+    {
+        right: 1%;
+    }
+    #logoIcons > span
+    {
+        position: relative;
+    }
+    #redCard
+    {
+        right: 1.5em;
+    }
+    #navyCard
+    {
+        left: 1.4em;
+    }
+}

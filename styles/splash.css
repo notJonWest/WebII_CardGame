@@ -1,0 +1,134 @@
+body
+{
+    color: white;
+}
+#logo
+{
+    border: none;
+}
+.logotext
+{
+    padding-left: 1em;
+}
+#logoIcons
+{
+    right: 0.15em;
+    top: -0.4em;
+    font-size: 3em;
+}
+
+main
+{
+    position: relative;
+}
+#animation
+{
+    margin: 0.5em auto;
+    position: relative;
+    border: solid 5px #620;
+    border-image: url(../images/brownWoodBorder.jpg) 50 round;
+}
+#doors
+{
+    position: absolute;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+#doors > img
+{
+    position: absolute;
+    height: 100%;
+    width: 49%;
+}
+#leftDoor
+{
+    left: 0;
+    transform-origin: left;
+}
+#rightDoor
+{
+    right: 0;
+    transform-origin: right;
+}
+
+#skipBtn
+{
+    height: 3em;
+    width: 100%;
+    cursor: pointer;
+    color: #02558b;
+    font-weight: bold;
+    background-color: #ffb42b;
+    border: 2px outset #e16712;
+}
+#skipBtn:hover
+{
+    border: 2px inset #e16712;
+}
+
+@media all and (min-width: 420px)
+{
+    #logo
+    {
+        background-size: 50%;
+    }
+    #logo > p
+    {
+        flex-flow: row nowrap;
+        padding-left: 0.5em;
+        height: 2em;
+    }
+    .logotext
+    {
+        font-size: 5vw;
+        line-height: 1em;
+        padding-left: 0.75em;
+    }
+    #logoIcons
+    {
+        font-size: 4em;
+        right: auto;
+        top: -0.35em;
+    }
+}
+@media all and (min-width: 768px)
+{
+    .logotext
+    {
+        padding: 0;
+        position: absolute;
+        top: 0;
+        font-size: 3em;
+    }
+    .logotext:nth-child(1)
+    {
+        left: 1%;
+    }
+    .logotext:nth-child(2)
+    {
+        left: 0;
+        right: 0;
+        top: -0.25em;
+        font-size: 4em;
+        z-index: 1;
+    }
+    .logotext:nth-child(3)
+    {
+        right: 1%;
+    }
+    #logoIcons > span
+    {
+        position: relative;
+    }
+    #redCard
+    {
+        right: 1.5em;
+    }
+    #navyCard
+    {
+        left: 1.4em;
+    }
+}

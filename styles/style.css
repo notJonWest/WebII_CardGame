@@ -1,0 +1,267 @@
+html
+{
+    cursor: default;
+}
+body
+{
+    margin: 0;
+    padding: 0;
+    background-image: url(../images/blackPanels.jpg);
+    background-size: cover;
+}
+@font-face
+{
+    font-family: 'Bleeding Cowboys';
+    src: url(fonts/Bleeding_Cowboys.ttf);
+}
+@font-face
+{
+    font-family: 'Anderson';
+    src: url('fonts/Anderson Four Feather Falls.ttf');
+}
+@font-face
+{
+    font-family: 'Wild West Icons';
+    src: url('fonts/Wild West Icons.ttf');
+}
+@font-face
+{
+    font-family: 'Dust West';
+    src: url('fonts/Dust West.otf');
+}
+@keyframes navyFlash
+{
+    0%, 49%, 100%
+    {
+        color: navy;
+    }
+    50%, 99%
+    {
+        color: red;
+    }
+}
+@keyframes redFlash
+{
+    0%, 49%, 100%
+    {
+        color: red;
+    }
+    50%, 99%
+    {
+        color: navy;
+    }
+}
+@keyframes invalidFlash
+{
+    0%, 50%
+    {
+        background-color: red;
+    }
+    25%, 75%, 100%
+    {
+        background-color: #faffbd;
+    }
+}
+.invalid
+{
+    animation-name: invalidFlash;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+.valid
+{
+    background-color: #80ff80;
+}
+label.valid
+{
+    display: none;
+}
+.underline
+{
+    text-decoration: underline;
+}
+header
+{
+    padding: 0;
+    border: solid 5px #620;
+    border-image: url(../images/brownWoodBorder.jpg) 50 round;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+a
+{
+    color: inherit;
+    text-decoration: none;
+}
+a:hover
+{
+    text-decoration: underline;
+}
+
+.icontext
+{
+    font-family: 'Wild West Icons';
+}
+#logo
+{
+    border-bottom: solid 5px #620;
+    border-image: url(../images/brownWoodBorder.jpg) 50 round;
+    background-image: url(../images/woodenFence.jpg);
+    background-size: cover;
+    text-align: center;
+}
+#logo > p
+{
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+}
+#logo > p > span
+{
+    margin: 0;
+}
+.logotext
+{
+    font-family: 'Anderson', serif;
+    color: black;
+    position: relative;
+    z-index: 2;
+}
+#logoIcons
+{
+    position: absolute;
+    z-index: 1;
+}
+#logoIcons > span
+{
+    margin: 0 1vw;
+}
+#redCard
+{
+    color: red;
+    animation-name: redFlash;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+#navyCard
+{
+    color: navy;
+    animation-name: navyFlash;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+#logoHat
+{
+    text-shadow: 2px 2px 0 #850, 2px -2px 0 #850, -2px -2px 0 #850, -2px 2px 0 #850;
+    color: #fec;
+}
+
+form
+{
+    padding: 0 1em;
+}
+form > p
+{
+    display: flex;
+    flex-flow: column nowrap;
+}
+form > p > input[type="text"]
+{
+    width: 30em;
+    max-width: 45vw;
+    height: 1em;
+    line-height: 1em;
+}
+form > p > input[type="submit"]
+{
+    width: 30em;
+    max-width: 45vw;
+}
+form > p > label:first-child
+{
+    width: 100%;
+    font-size: 0.8em;
+    text-align: left;
+}
+form > p > label.error
+{
+    font-size: 0.8em;
+    color: red;
+}
+form > p > input.error
+{
+    outline-color: red;
+    background-color: #faffbd;
+}
+
+form > p > br
+{
+    display: none;
+}
+
+footer
+{
+    text-align: center;
+    font-size: 0.7em;
+}
+@media all and (min-width: 420px)
+{
+    #logo > p
+    {
+        justify-content: center;
+    }
+
+    form > p
+    {
+        flex-flow: row wrap;
+        position: relative;
+    }
+    form > p > [type="text"]
+    {
+        align-self: flex-end; /*To make multiline labelled fields appear at the bottom*/
+    }
+    form > p > [type="submit"]
+    {
+        margin: 1em 0 0 8em;
+    }
+    form > p > label:first-child
+    {
+        font-size: 1em;
+        text-align: right;
+        margin-right: 0.8em;
+        width: 6em;
+    }
+    form > p > label.error
+    {
+        width: 50%;
+        padding-left: 8.6em;
+    }
+    form > p > br
+    {
+        display: block;
+    }
+}
+@media all and (min-width: 768px)
+{
+    form
+    {
+        display: inline-block;
+    }
+    body
+    {
+        padding: 0.7em 0.7em 0 0.7em;
+    }
+    header
+    {
+        margin-bottom: 0.7em;
+    }
+}
+/* THIRD PARTY RESOURCES
+ * All images were found using Google's Liscense filter found under
+ * Tools > Usage rights > Labeled for noncommercial usage
+ * The "without modification" filter was used variably among the images, but each liscense was respected.
+ *
+ * The icons used to make the logo are from here: https://www.dafont.com/wild-west-icons.font
+ * The rest of the fonts are from the same website, all under Fancy>Western
+ **/

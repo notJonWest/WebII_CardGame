@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>West's Western Saloon</title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <link rel="shortcut icon" type="images/png" href="images/cards/Spades13.png"/>
+    <link rel="stylesheet" href="jquery/jquery-ui.css"/>
+    <link rel="stylesheet" href="styles/style.css"/>
+    <link rel="stylesheet" href="styles/splash.css"/>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <p>
+                <span class="logotext">West's</span>
+                <span class="logotext">Western</span>
+                <span class="logotext">Saloon</span>
+                <span id="logoIcons"><!--
+                --><span class="icontext" id="redCard">P</span><!--
+                --><span class="icontext" id="logoHat">f</span><!--
+                --><span class="icontext" id="navyCard">P</span>
+                </span>
+            </p>
+        </div>
+    </header>
+    <main>
+        <div id="animation">
+            <canvas id="myCanvas" width="500" height="500">Sorry, your browser does not support canvas</canvas>
+            <div id="doors">
+                <img class="door" id="leftDoor" alt="Left saloon door" src="images/saloonDoorLeft.png"/>
+                <img class="door" id="rightDoor" alt="Right saloon door" src="images/saloonDoorRight.png"/>
+            </div>
+        </div>
+        <input type="button" id="skipBtn" value="Skip"/>
+    </main>
+    <footer>&copy; West's Western Saloon Casino</footer>
+<script src="jquery/jquery-3.3.1.js"></script>
+<script src="jquery/jquery-ui.js"></script>
+<script src="jquery/jquery.validate.js"></script>
+<script src="js/common.js"></script>
+<script src="js/splash.js"></script>
+</body>
+</html>
